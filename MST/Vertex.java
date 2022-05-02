@@ -1,3 +1,6 @@
+// אלעד כהן - 318918968
+// עמית קפלן - 209049972
+
 package MST;
 
 import java.util.LinkedList;
