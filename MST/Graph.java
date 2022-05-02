@@ -20,4 +20,23 @@ public class Graph {
     public Vertex[] getVertices() {
         return this.vertices;
     }
+
+    public int vertexExistsById(int id) {
+        for (Vertex vertex : this.vertices) {
+            if (vertex.getId() == id)
+                return 1;
+        }
+        return 0;
+    }
+
+    public void print() {
+        System.out.println(this.name + " : ");
+        for (Vertex vertex : this.vertices) {
+            String out = vertex.getId() + " : ";
+            for (AdjNode adj : vertex.getAdjacentList()) {
+                out = out + " ( " + adj.getId() + " , " + adj.getWeight() + " ) " + " , ";
+            }
+            System.out.println(out);
+        }
+    }
 }
