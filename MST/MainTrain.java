@@ -44,9 +44,15 @@ public class MainTrain {
 		MST.print();
 
 		Vertex newEdge = new Vertex(0);
-		newEdge.addAdjacentNode(new AdjNode(3, 1));
-		System.out.println("added an edge from node 0 to node 3 with a weight of 1");
+		newEdge.addAdjacentNode(new AdjNode(3, 30));
+		System.out.println("added an edge from node 0 to node 3 with a weight of 30");
 		MSTLib.MSTUpdate(MST, newEdge);
+		MST.print();
+
+		Vertex newEdgeChange = new Vertex(0);
+		newEdgeChange.addAdjacentNode(new AdjNode(3, 1));
+		System.out.println("added an edge from node 0 to node 3 with a weight of 1");
+		MSTLib.MSTUpdate(MST, newEdgeChange);
 		MST.print();
 
 		System.out.println("done!");
